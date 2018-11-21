@@ -41,9 +41,14 @@ def partition(m, first, last, vtc):
 
    return rightmark
 
+def totalTime(m):
+    output = []
+
+
 LRJF(testcase1)
 
-for col in testcase1:
-    for n in col:
-        print(n, "\t")
+for i in range(3):
+    for col in testcase1:
+        print(col[i], end="\t")
     print("\n")
+
