@@ -1,4 +1,4 @@
-import time, copy
+import time, copy, sys
 
 testcase1 = [[12, 55, 67], [4, 71, 59], [20, 67, 70], [92, 68, 90], [83, 54, 13]]
 
