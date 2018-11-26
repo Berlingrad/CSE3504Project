@@ -1,14 +1,17 @@
+"""
+This file acted as both LRJF/FCFS implementation and libarary for comparison between the two algorrithem.
+"""
+
 import time, copy, sys
 
-testcase1 = [[12, 55, 67], [4, 71, 59], [20, 67, 70], [92, 68, 90], [83, 54, 13]]
 
-def LRJF(works):
+def LRJF(works): ##LRJF algorithm  implemenatition by using quick sort
     start_time = time.time()
     output = copy.deepcopy(works)
     quickSort(output, 0, len(works)-1, 2)
     print("LRJF runtime = %s seconds" % (time.time() - start_time))
     return output
-def FCFS(works):
+def FCFS(works):  ##FCFS algorithm  implemenatition by using quick sort
     start_time = time.time()
     output = copy.deepcopy(works)
     quickSort(works, 0, len(works)-1, 0)
@@ -43,6 +46,10 @@ def partition(m, first, last, vtc):
 
    return rightmark
 
+"""
+Calculate procesing cost of a given case based on output matrix
+"""
+
 def totalTime(m):
     output = []
     for i, col in enumerate(m):
@@ -50,19 +57,20 @@ def totalTime(m):
         for j in range(i+1):
             sum += m[j][1]
         output.append(sum)
-    return(output)
+    return max(output)
 
+if __name__ == "__main__":
+    testcase1 = [[12, 55, 67], [4, 71, 59], [20, 67, 70], [92, 68, 90], [83, 54, 13]]
 
+    out = LRJF(testcase1)
 
-out = LRJF(testcase1)
+    for i in range(3):
+        for col in out:
+            print(col[i], end="\t")
+        print("\n")
 
-for i in range(3):
-    for col in out:
-        print(col[i], end="\t")
+    print("Total time cost of each branch: ")
+    for n in totalTime(out):
+        print(n, end = "\t")
     print("\n")
-
-print("Total time cost of each branch: ")
-for n in totalTime(out):
-    print(n, end = "\t")
-print("\n")
 

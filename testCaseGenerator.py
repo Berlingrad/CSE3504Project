@@ -1,19 +1,7 @@
 import sys, random, csv, argparse
 
-"""
-assert len(sys.argv) == 5
-size = int(sys.argv[1])
-numofthreads = int(sys.argv[2])
-case = int(sys.argv[3])
-outfile = sys.argv[4]
 
-outfile = "./test.csv"
-size = 10
-numofthreads=4
-case = 1
-"""
-
-parser = argparse.ArgumentParser(description='generate test file for LRJF and FCFS comparison')
+parser = argparse.ArgumentParser(description='generate source file for LRJF and FCFS comparison')
 parser.add_argument('-s','--size', metavar='SIZE',
                     dest='s',
                     type = int,
