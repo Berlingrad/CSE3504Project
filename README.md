@@ -1,6 +1,6 @@
 # CSE3504Project: LRJF and FCFS algorithms
 
-Sample run:
+<b>Sample run:</b>
 <pre>python testCaseGenerator.py -s 100 -t 4 -c 6 -p ./source.csv</pre>
 This command generates a csv file containing data for LRJF and FCFS comparison. 
 <code>-s</code> indicates the size of the test data in terms of number of data items.
@@ -13,7 +13,7 @@ Use flag <code>-h</code> for detailed information
 <code>LRJFvsFCFS.py</code> takes a csv file generated from <code> testCaseGenerator.py</code>
 as input, display average process cost of each algorithm over test data items.
 
-Sample output:
+<b>Sample output:</b>
 <pre>
 Number of data items = 100
 Average processing cost of LRJF =   308.92
