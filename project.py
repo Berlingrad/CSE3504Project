@@ -6,16 +6,16 @@ import time, copy, sys
 
 
 def LRJF(works): ##LRJF algorithm  implemenatition by using quick sort
-    start_time = time.time()
+    ##start_time = time.time()
     output = copy.deepcopy(works)
     quickSort(output, 0, len(works)-1, 2)
-    print("LRJF runtime = %s seconds" % (time.time() - start_time))
+    ##print("LRJF runtime = %s seconds" % (time.time() - start_time))
     return output
 def FCFS(works):  ##FCFS algorithm  implemenatition by using quick sort
-    start_time = time.time()
+    ##start_time = time.time()
     output = copy.deepcopy(works)
     quickSort(works, 0, len(works)-1, 0)
-    print("FCFS runtime = %s seconds" % (time.time() - start_time))
+    ##print("FCFS runtime = %s seconds" % (time.time() - start_time))
     return output
 
 def quickSort(m, first, last, vtc):

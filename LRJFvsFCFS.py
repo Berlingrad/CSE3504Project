@@ -20,7 +20,6 @@ if __name__=="__main__":
             if row != []:
                 if line_count == 2:
 
-                    print("hi")
                     input.append([])
                     line_count = 0
                 else:
@@ -30,7 +29,6 @@ if __name__=="__main__":
 
 
     del input[-1]
-    print(len(input))
     runtime_L = [] ##Run time of LRJF on all test cases
     runtime_F = [] ##Run time of FCFS on all test cases
     for t in input:
@@ -40,5 +38,5 @@ if __name__=="__main__":
         runtime_F.append(project.totalTime(fo))
 
     print("Number of data items = %d" % (len(input)))
-    print("Average processing cost of LRJF = 8.2f", (sum(runtime_L) / len(runtime_L)))
-    print("Average processing cost of FCFS = 8.2f", (sum(runtime_F) / len(runtime_F)))
+    print("Average processing cost of LRJF = %8.2f" % (sum(runtime_L) / len(runtime_L)))
+    print("Average processing cost of FCFS = %8.2f" % (sum(runtime_F) / len(runtime_F)))
