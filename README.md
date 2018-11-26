@@ -7,7 +7,7 @@ This command generates a csv file containing data for LRJF and FCFS comparison.
 <code>-t</code> indicates number of threads applied in each data item
 <code>-c</code> specifies case number according to Table 1 of supplementary file  2.
 <code>-p</code> is the path to the output file, default if source.csv.
-Use <code>-h</code> for detailed information
+Use flag <code>-h</code> for detailed information
 
 <pre>python LRJFvsFCFS.py source.csv</pre>
 <code>LRJFvsFCFS.py</code> takes a csv file generated from <code> testCaseGenerator.py</code>
