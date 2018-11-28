@@ -1,5 +1,11 @@
-import sys, random, csv, argparse
+"""
+This file generates test data for LRJF and FCFS comparison. Each output stata item is a matrix stored in a "," delimited
+csv file. Matrices in the output csv file are separated by newlines. User can specify number of data items, number of
+Threads (number of columns in matrix), case number ( where PLJT, LASU, RJ eqaul according to Table 1 of Supplementary
+file 2), output path. All numbers are randomly generated integer ranging (0, 100). .
+"""
 
+import sys, random, csv, argparse
 
 parser = argparse.ArgumentParser(description='generate source file for LRJF and FCFS comparison')
 parser.add_argument('-s','--size', metavar='SIZE',

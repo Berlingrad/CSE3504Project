@@ -1,21 +1,21 @@
 """
 This file acted as both LRJF/FCFS implementation and libarary for comparison between the two algorrithem.
+Both LRJF and FCFS use quick sort to schedule threads.
+The process cost of each task is calculated by function totalTime(). The process cost is determined by the last finished
+thread.
 """
 
 import time, copy, sys
 
 
-def LRJF(works): ##LRJF algorithm  implemenatition by using quick sort
-    ##start_time = time.time()
+def LRJF(works): ##LRJF algorithm implemenatition by using quick sort
     output = copy.deepcopy(works)
     quickSort(output, 0, len(works)-1, 2)
-    ##print("LRJF runtime = %s seconds" % (time.time() - start_time))
+    output.reverse()
     return output
-def FCFS(works):  ##FCFS algorithm  implemenatition by using quick sort
-    ##start_time = time.time()
+def FCFS(works):  ##FCFS algorithm implemenatition by using quick sort
     output = copy.deepcopy(works)
-    quickSort(works, 0, len(works)-1, 0)
-    ##print("FCFS runtime = %s seconds" % (time.time() - start_time))
+    quickSort(output, 0, len(works)-1, 0)
     return output
 
 def quickSort(m, first, last, vtc):
@@ -70,7 +70,5 @@ if __name__ == "__main__":
         print("\n")
 
     print("Total time cost of each branch: ")
-    for n in totalTime(out):
-        print(n, end = "\t")
-    print("\n")
+    print(totalTime(out))
 
